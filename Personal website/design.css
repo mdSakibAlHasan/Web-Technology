@@ -1,0 +1,26 @@
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 20px 20px 20px 20px;
+}
+table {
+    width: 100%;
+}
+
+.heading:hover{
+    background-color: dimgray;
+}
+
+.heading{
+    width: 25%;
+}
+
+.div_style{
+    /* border: 1px solid rgb(0, 0, 0); */
+    height: auto;
+    width: 48%;
+    margin: 20px 5px;
+    display: inline-block;
+}
