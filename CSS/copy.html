@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML Div Layout</title>
+    <style>
+      body {
+        margin: 0px;
+        height: 100%;
+      }
+      .header {
+        padding: 20px 20%;
+        background: #acb3b9;
+        height: 20%;
+      }
+      .sakib {
+        width: 100%;
+        height: 100%;
+        background: #f2f2f2;
+      }
+      .nav,
+      .section {
+        float: left;
+        min-height: 170px;
+        box-sizing: border-box;
+      }
+      .nav {
+        width: 20%;
+        background: #d4d7dc;
+      }
+      .section {
+        width: 80%;
+        height: 100%;
+        background-color: #0a5597;
+      }
+
+      .nav {
+        height: 100%;
+        color: #333;
+      }
+      .clearfix:after {
+        content: ".";
+        display: block;
+        height: 80%;
+      }
+      .footer {
+        background: #acb3b9;
+        text-align: center;
+        padding: 5px;
+      }
+      .sm {
+        width: 100%;
+        height: 30%;
+        margin-bottom: 2px;
+        background-color: white;
+      }
+      b {
+        padding: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sakib">
+      <div class="header">
+        <h1>Institude of Information Technology</h1>
+      </div>
+      <div class="clearfix">
+        <div class="nav">
+          <div class="sm">
+            <b>About</b>
+          </div>
+          <div class="sm">
+            <b>History</b>
+          </div>
+          <div class="sm">
+            <b>Achievement</b>
+          </div>
+        </div>
+        <div class="section">
+          <h2>Welcome to our site</h2>
+          <p>Here you will learn how to create websites...</p>
+        </div>
+      </div>
+      <div class="footer">
+        <p>copyright &copy; BSSE1209</p>
+      </div>
+    </div>
+  </body>
+</html>
