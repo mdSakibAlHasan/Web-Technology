@@ -1,20 +1,31 @@
-"use strict";
-exports.__esModule = true;
-var message = "Welcome back";
-console.log(message);
-var x;
-var y = 10; //never change
-var isBegin = true;
-var name = "sakib al HAsan";
-var sentence = "My name is ".concat(name, "\nI am beginer");
-console.log(sentence);
-var n = null;
-var u = undefined; //any variable can contain
-var list1 = [1, 2, 3];
-var list2 = [1, 2, 3, 4];
-var per = ["sakib", 1209];
-var ran = 10;
-ran = true;
-console.log(ran);
-var my = 10;
-my.toUpperCase(); //type casting
+// export { }
+// let message = "Welcome back";
+// console.log(message);
+// let x;
+// const y = 10; //never change
+// let isBegin: boolean = true;
+// let name: string = "sakib al HAsan";
+// let sentence = `My name is ${name}
+// I am beginer`;
+// console.log(sentence);
+// let n: null = null;
+// let u: undefined = undefined;       //any variable can contain
+// let list1: number[] = [1, 2, 3];
+// let list2: Array<number> = [1, 2, 3, 4];
+// let per: [string, number] = ["sakib", 1209];
+// let ran: any = 10;
+// ran = true;
+// console.log(ran);
+// let my: unknown = 10;
+// (my as string).toUpperCase();       //type casting
+function add(num1, num2) {
+    return num1 + num2;
+}
+function add2(num1, num2) {
+    if (num2)
+        return num1 + num2;
+    else
+        return num1;
+}
+var result = add2(23);
+console.log(result);

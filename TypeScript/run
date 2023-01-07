@@ -1,0 +1,6 @@
+tsc main.js (file name)---comile
+node main.js 		--- execution
+
+
+automatic recompile
+tsc main(file name) --watch

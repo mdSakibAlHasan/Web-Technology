@@ -10,6 +10,16 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body,
+    html {
+      height: 100%;
+    }
+
+    img {
+      display: inline;
+    }
+  </style>
 </head>
 
 <body>
@@ -29,29 +39,39 @@
     </div>
   </nav>
 
-  <div class="col-sm-1"></div>
-  <div class="col-sm-4">
-    <p>
-    <h2> List of Hobbies </h2>
-    </p>
-    <ul>
-      <li>
-        <h3>Cycling</h3>
-      </li>
-      <li>
-        <h3>Reading science fiction</h3>
-      </li>
-      <li>
-        <h3>Traveling</h3>
-      </li>
-    </ul>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <img src="cycle.jpeg" alt="no image" style="height: min-content; width: fit-content;">
+      <h3>Cycling</h3>
+    </div>
+
+    <div class="col-sm-1"></div>
+    <div class="col-sm-3">
+      <img src="fiction.webp" alt="no image" style="height: min-content; width: fit-content;">
+      <h3>Reading Science fiction</h3>
+    </div>
+
   </div>
+  <div class="row">
+    <div class="col-sm-4"></div>
+
+    <div class="col-sm-3">
+      <img src="travel.jpeg" alt="no image" style="height: min-content; width: fit-content;">
+      <h3>Traveling</h3>
+    </div>
+
+  </div>
+
 
   <br />
   <br />
-  <div class="col-sm-12" style="background-color: rgb(220, 220, 228)">
-    <p>copyright &copy; BSSE1209</p>
-  </div>
+  <footer>
+    <div class="col-sm-12 fixed-bottom" style="background-color: rgb(220, 220, 228)">
+      <p>copyright &copy; BSSE1209</p>
+    </div>
+  </footer>
 </body>
 
 </html>
