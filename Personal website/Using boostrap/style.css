@@ -3,7 +3,7 @@
 .navbar {
     overflow: hidden;
     background-color: #84c577;
-    padding: 20px 30px;
+    padding: 10px 20px;
     transition: 0.4s;
     width: 100%;
     top: 0;
@@ -47,4 +47,15 @@
 p {
     text-align: center;
 }
+
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      footer {
+        margin-top: auto;
+      }
+   
 
