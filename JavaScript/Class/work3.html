@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myDiv">
+      <p>This is para1</p>
+      <p>This is para2</p>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+      </ul>
+    </div>
+
+    <script>
+      //let myDiv = document.getElementById("myDiv");
+      //let para = document.getElementsByTagName("p");
+      //for (let i = 0; i < para.length; i++)
+      //console.log(para[i]);
+
+      let myDiv = document.getElementById("myDiv");
+      console.log(myDiv.firstChild);
+      console.log(myDiv.children);
+      let ch = myDiv.children[2];
+      //console.log(ch[0].text);
+      let text = ch.children[1].previousElementSibling.innerHTML;
+      console.log(text);
+    </script>
+  </body>
+</html>

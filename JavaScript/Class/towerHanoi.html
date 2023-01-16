@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      .divClass {
+        border: 2px solid;
+        height: 300px;
+        width: 30%;
+        float: left;
+        padding: auto;
+        margin-right: 2%;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .buttonClass1 {
+        float: left;
+        margin-top: 20px;
+        margin-right: 25%;
+      }
+
+      .buttonClass2 {
+        float: left;
+        margin-top: 20px;
+        margin-right: 25%;
+      }
+      .innerButton {
+        height: 15%;
+        width: 90%;
+        margin: 3%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1" class="divClass">
+      <button id="button11" class="innerButton">2</button>
+      <button id="button12" class="innerButton">3</button>
+      <button id="button13" class="innerButton">1</button>
+      <button id="button14" class="innerButton">4</button>
+    </div>
+    <div id="div2" class="divClass"></div>
+    <div id="div3" class="divClass"></div>
+    <br /><br /><br />
+    <button class="buttonClass1" onclick="myFunction12()">1->2</button>
+    <button class="buttonClass1" onclick="myFunction23()">2->3</button>
+    <button class="buttonClass1" onclick="myFunction31()">3->1</button>
+    <br />
+    <button class="buttonClass2" onclick="myFunction32()">3->2</button>
+    <button class="buttonClass2" onclick="myFunction21()">2->1</button>
+    <button class="buttonClass2" onclick="myFunction13()">1->3</button>
+
+    <script>
+      //let b = document.getElementById("button1");
+      //b.style.display = "none";
+
+      function myFunction12() {
+        let bt = document.getElementById("div1");
+        let className = bt.lastElementChild.getAttribute("class");
+        let b2 = document.getElementById("div2");
+        let btn = document.createElement("button");
+        btn.innerText = bt.lastElementChild.innerText;
+        btn.setAttribute("class", className);
+        b2.insertBefore(btn, b2.children[0]);
+        bt.removeChild(bt.lastElementChild);
+      }
+
+      function myFunction23() {
+        let bt = document.getElementById("div2");
+        let className = bt.children[0].getAttribute("class");
+        let t = bt.children[0].innerText;
+
+        let b2 = document.getElementById("div3");
+        let btn = document.createElement("button");
+        btn.innerText = t;
+        btn.setAttribute("class", className);
+        b2.insertBefore(btn, b2.children[0]);
+        bt.removeChild(bt.firstElementChild);
+      }
+      function myFunction31() {
+        let bt = document.getElementById("div3");
+        let className = bt.children[0].getAttribute("class");
+        let t = bt.children[0].innerText;
+
+        let b2 = document.getElementById("div1");
+        let btn = document.createElement("button");
+        btn.innerText = t;
+        btn.setAttribute("class", className);
+        b2.insertBefore(btn, b2.children[0]);
+        bt.removeChild(bt.firstElementChild);
+      }
+
+      function myFunction32() {
+        let bt = document.getElementById("div3");
+        let className = bt.children[0].getAttribute("class");
+        let t = bt.children[0].innerText;
+
+        let b2 = document.getElementById("div2");
+        let btn = document.createElement("button");
+        btn.innerText = t;
+        btn.setAttribute("class", className);
+        b2.insertBefore(btn, b2.children[0]);
+        bt.removeChild(bt.firstElementChild);
+      }
+
+      function myFunction21() {
+        let bt = document.getElementById("div2");
+        let className = bt.children[0].getAttribute("class");
+        let t = bt.children[0].innerText;
+
+        let b2 = document.getElementById("div1");
+        let btn = document.createElement("button");
+        btn.innerText = t;
+        btn.setAttribute("class", className);
+        b2.insertBefore(btn, b2.children[0]);
+        bt.removeChild(bt.firstElementChild);
+      }
+
+      function myFunction13() {
+        let bt = document.getElementById("div1");
+        let className = bt.children[0].getAttribute("class");
+        let t = bt.children[0].innerText;
+
+        let b2 = document.getElementById("div3");
+        let btn = document.createElement("button");
+        btn.innerText = t;
+        btn.setAttribute("class", className);
+        b2.insertBefore(btn, b2.children[0]);
+        bt.removeChild(bt.firstElementChild);
+      }
+    </script>
+  </body>
+</html>

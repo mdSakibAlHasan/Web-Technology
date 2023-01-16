@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .myPara {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="1" class="myPara">This is para1</p>
+    <p id="p2">This is para2</p>
+    <p>This is para3</p>
+
+    <ol id="3">
+      <li>list1</li>
+      <li>lisr</li>
+    </ol>
+
+    <script>
+      let para1 = document.getElementById("1");
+      let className = para1.getAttribute("class");
+      let para3 = document.getElementById("p2");
+      para3.setAttribute("class", className);
+
+      /* let para = document.createElement("p");
+      para.innerText = "This is a para4";
+      document.body.appendChild(para);
+
+      let a = document.getElementById("3");
+      a.removeChild(a.children[0]);
+      let list = document.createElement("li");
+      list.innerText = "list3";
+      a.insertBefore(list, a.children[0]);
+
+      let para2 = document.getElementById("p2");
+      para2.remove();*/
+    </script>
+  </body>
+</html>
