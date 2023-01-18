@@ -29,3 +29,23 @@ function add2(num1, num2) {
 }
 var result = add2(23);
 console.log(result);
+// function fullName(person: { firstName: string, lastName: string }) {
+function fullName(person) {
+    console.log("".concat(person.firstName, " ").concat(person.lastName));
+}
+var p = {
+    firstName: "sakib",
+    lastName: "Hasan"
+};
+fullName(p);
+var Employee = /** @class */ (function () {
+    function Employee(name) {
+        this.employeeName = name;
+    }
+    Employee.prototype.greet = function () {
+        console.log("Employee name is  ".concat(this.employeeName));
+    };
+    return Employee;
+}());
+var emp = new Employee("Sakib Al Hasan");
+emp.greet();

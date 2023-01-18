@@ -30,11 +30,45 @@ function add(num1, num2) {
 
 
 function add2(num1, num2?) {
-    if(num2)
+    if (num2)
         return num1 + num2;
     else
-    return num1;
+        return num1;
 }
 
 let result = add2(23);
 console.log(result);
+
+interface Person {
+    firstName: string,
+    lastName: string
+}
+
+// function fullName(person: { firstName: string, lastName: string }) {
+function fullName(person: Person) {
+    console.log(`${person.firstName} ${person.lastName}`);
+
+}
+
+let p = {
+    firstName: `sakib`,
+    lastName: `Hasan`
+};
+
+fullName(p);
+
+class Employee {
+    employeeName: string;
+
+    constructor(name: string) {
+        this.employeeName = name;
+    }
+
+
+    greet() {
+        console.log(`Employee name is  ${this.employeeName}`);
+    }
+}
+
+let emp = new Employee(`Sakib Al Hasan`);
+emp.greet();
