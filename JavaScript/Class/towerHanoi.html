@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <style>
       body {
         height: 100%;
@@ -26,7 +27,6 @@
         margin-top: 20px;
         margin-right: 10%;
         margin-left: 15%;
-        width: 5%;
         border-radius: 5%;
       }
 
@@ -35,9 +35,7 @@
         margin-top: 20px;
         margin-right: 10%;
         margin-left: 15%;
-        width: 5%;
         border-radius: 5%;
-        
       }
       .innerButton {
         height: 15%;
@@ -48,9 +46,14 @@
         background-color: blueviolet;
       }
 
-      #checkButton{
+      #checkButton {
         margin-left: 43%;
         width: 10%;
+      }
+
+      #d2 {
+        height: 100px;
+        width: 250px;
       }
     </style>
   </head>
@@ -71,11 +74,25 @@
     <button class="buttonClass2" onclick="myFunction13()">1->3</button>
     <button class="buttonClass2" onclick="myFunction21()">2->1</button>
     <button class="buttonClass2" onclick="myFunction32()">3->2</button>
-    
-    <button id="checkButton" class="buttonClass2" onclick="mycheck()">Check Result</button>
+
+    <button onclick="mycheck()" id="checkButton" class="buttonClass2">
+      Check Result
+    </button>
+
+    <div id="id01" class="w3-modal">
+      <div id="d2" class="w3-modal-content w3-animate-zoom">
+        <header class="w3-container w3-teal">
+          <span
+            onclick="document.getElementById('id01').style.display='none'"
+            class="w3-button w3-display-topright"
+            >&times;</span
+          >
+          <h2>Cingatulation you are Winner</h2>
+        </header>
+      </div>
+    </div>
 
     <script>
-
       function myFunction12() {
         let bt = document.getElementById("div1");
         let className = bt.lastElementChild.getAttribute("class");
@@ -92,7 +109,7 @@
         let className = bt.lastElementChild.getAttribute("class");
         let b2 = document.getElementById("div3");
         let btn = document.createElement("button");
-        btn.innerText = bt.lastElementChild.innerText;;
+        btn.innerText = bt.lastElementChild.innerText;
         btn.setAttribute("class", className);
         b2.appendChild(btn);
         bt.removeChild(bt.lastElementChild);
@@ -149,29 +166,32 @@
         bt.removeChild(bt.lastElementChild);
       }
 
-      function mycheck(){
+      function mycheck() {
         let d1 = document.getElementById("div1");
         let d2 = document.getElementById("div2");
         let d3 = document.getElementById("div3");
-        if(d1.childElementCount == 4)
-          checkSort(d1);
-        else if(d2.childElementCount == 4)
-          checkSort(d2);
-        else if(d3.childElementCount == 4)
-          checkSort(d3);
+        if (d1.childElementCount == 4) checkSort(d1);
+        else if (d2.childElementCount == 4) checkSort(d2);
+        else if (d3.childElementCount == 4) checkSort(d3);
         else
-          alert("\t\tNot complete \n You should rearrange all disk in one place ");
+          alert(
+            "\t\tNot complete \n You should rearrange all disk in one place "
+          );
       }
 
-      function checkSort(obj){
-        if(obj.innerText[0] == 4 && obj.innerText[2] == 3 && obj.innerText[4] == 2 && obj.innerText[6] == 1){
-          alert("Congratulation you win");
-        }
-        else{
+      function checkSort(obj) {
+        if (
+          obj.innerText[0] == 4 &&
+          obj.innerText[2] == 3 &&
+          obj.innerText[4] == 2 &&
+          obj.innerText[6] == 1
+        ) {
+          (document.getElementById("id01").style.display = "block"),
+            (style.class = "w3-button w3-black");
+        } else {
           alert("Disk are not rearrange");
         }
       }
-
     </script>
   </body>
 </html>
