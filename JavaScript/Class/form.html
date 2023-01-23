@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Web technology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>Couse enrollment form</h1>
+    <form name="myForm">
+      <label for="id_name">userName</label>
+      <input type="text" id="id_name" name="myName" />
+
+      <br />
+      <label for="id_pass">password</label>
+      <input type="password" id="id_pass" name="pass" />
+
+      <br />
+
+      <br />
+      <label for="id_age">age</label>
+      <input type="number" id="id_age" name="age" />
+
+      <br />
+
+      <input type="submit" value="Submit" onclick="validate()" />
+    </form>
+
+    <script>
+      function validate() {
+        let name = document.forms.myForm.myName.value;
+        if (!name) alert("name can't be empty");
+        else alert(name);
+        // console.log(name);
+
+        let pass = document.forms.myForm.pass.value;
+        if (pass.length < 6) alert("pass is short");
+
+        let age = document.forms.myForm.age.value;
+        if (age < 20) alert("you are not valid user");
+      }
+    </script>
+  </body>
+</html>

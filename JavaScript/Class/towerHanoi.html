@@ -47,8 +47,17 @@
       }
 
       #checkButton {
-        margin-left: 43%;
+        margin-left: 20%;
+        margin-top: 10%;
         width: 10%;
+        background-color: blue;
+      }
+
+      #resetButton{
+        margin-left: 20%;
+        margin-top: 10%;
+        width: 10%;
+        background-color: brown;
       }
 
       #d2 {
@@ -59,9 +68,9 @@
   </head>
   <body>
     <div id="div1" class="divClass">
-      <button id="button2" class="innerButton">2</button>
-      <button id="button3" class="innerButton">3</button>
-      <button id="button1" class="innerButton">1</button>
+      <button id="button2" class="innerButton">1</button>
+      <button id="button3" class="innerButton">2</button>
+      <button id="button1" class="innerButton">3</button>
       <button id="button4" class="innerButton">4</button>
     </div>
     <div id="div2" class="divClass"></div>
@@ -78,6 +87,9 @@
     <button onclick="mycheck()" id="checkButton" class="buttonClass2">
       Check Result
     </button>
+    <button onclick="reset()" id="resetButton" class="buttonClass2">
+      Reset
+    </button>
 
     <div id="id01" class="w3-modal">
       <div id="d2" class="w3-modal-content w3-animate-zoom">
@@ -93,6 +105,28 @@
     </div>
 
     <script>
+      function shuffle(array) {
+        let currentIndex = array.length,  randomIndex;
+        while (currentIndex != 0) {
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+      
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }  
+        return array;
+      }
+      let random_array = [4,3,2,1]; 
+
+      function reset(){
+        shuffle(random_array);
+        let bt = document.getElementById("div1");
+        for(let i=0;i<4;i++){
+          bt.children[i].innerText = random_array[i];
+        }
+      }
+      reset();
+      
       function myFunction12() {
         let bt = document.getElementById("div1");
         let className = bt.lastElementChild.getAttribute("class");
@@ -181,10 +215,11 @@
 
       function checkSort(obj) {
         if (
-          obj.innerText[0] == 4 &&
-          obj.innerText[2] == 3 &&
-          obj.innerText[4] == 2 &&
-          obj.innerText[6] == 1
+          obj.children[0].innerText == 4 &&
+          obj.children[1].innerText == 3 &&
+          obj.children[2].innerText == 2 &&
+          obj.children[3].innerText == 1
+          
         ) {
           (document.getElementById("id01").style.display = "block"),
             (style.class = "w3-button w3-black");
