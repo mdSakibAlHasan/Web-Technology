@@ -26,6 +26,13 @@
       let className = para1.getAttribute("class");
       let para3 = document.getElementById("p2");
       para3.setAttribute("class", className);
+      //let t1 = document.getElementsByClassName("1");
+      let t1_h = para1.innerHTML;
+      let n = document.createElement("h1").innerText = "hellow";
+      console.log(t1_h);
+      para1.innerHTML = n;
+      t1_h = para1.innerText;
+      console.log(t1_h);
 
       /* let para = document.createElement("p");
       para.innerText = "This is a para4";
