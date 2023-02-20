@@ -1,1 +1,0 @@
-<?php echo $_GET['name']. " and " . $_GET['email']; ?>
