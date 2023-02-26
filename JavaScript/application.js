@@ -9,12 +9,13 @@
 // document.getElementsByClassName("ab")[1].innerHTML = "asddasd";
 
 
-document.querySelector("#pera").innerHTML = "k";
-document.querySelectorAll(".ab")[1].innerHTML = "p";
+// document.querySelector("#pera").innerHTML = "k";
+// document.querySelectorAll(".ab")[1].innerHTML = "p";
 
 
-document.querySelector("a").innerHTML = "New text";
-document.querySelector("li a").innerHTML = "list text";
+// document.querySelector("a").innerHTML = "New text";
+// document.querySelector("li a").innerHTML = "list text";
 
-document.querySelector("div a").innerHTML = "Not text";
+// document.querySelector("div a").innerHTML = "Not text";
 
+alert("In external");

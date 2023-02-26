@@ -7,8 +7,12 @@ h2{
     text-align: center;
 }
 
-
-
-body{
-    background-color: darkslateblue;
+p{
+    color: aqua;
 }
+
+
+
+/* body{
+    background-color: darkslateblue;
+} */
