@@ -18,18 +18,25 @@
     </div>
 
     <script>
+  document.write("Hellow");
+      let m = document.body;
+      for(let i=0;i<3;i++)
+      console.log(m.children[0].children[2].children[0].innerHTML);
+      let an = m.innerText;
+      console.log(an);
+    
       //let myDiv = document.getElementById("myDiv");
       //let para = document.getElementsByTagName("p");
       //for (let i = 0; i < para.length; i++)
       //console.log(para[i]);
 
-      let myDiv = document.getElementById("myDiv");
-      console.log(myDiv.firstChild);
-      console.log(myDiv.children);
-      let ch = myDiv.children[2];
+     // let myDiv = document.getElementById("myDiv");
+     // console.log(myDiv.firstChild);
+      //console.log(myDiv.children);
+     // let ch = myDiv.children[2];
       //console.log(ch[0].text);
-      let text = ch.children[1].previousElementSibling.innerHTML;
-      console.log(text);
+     // let text = ch.children[1].previousElementSibling.innerHTML;
+      //console.log(text);
     </script>
   </body>
 </html>
